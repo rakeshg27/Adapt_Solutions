@@ -1,0 +1,53 @@
+//Coding Java : Conditional Statements 2
+/*
+DESCRIPTION
+Complete the main method of the class Source with appropriate code to accept all the 3 sides of a triangle and display if the triangle is a right angle triangle or not.
+
+A rigt angle triangle is a triangle whose sum of squares of two sides will result in the square of the third side.
+
+Following requirements should be taken care in the program.
+
+
+
+Input should be taken through Console
+Program should print the output as described in the Example Section below
+The input values representing sides of the triangle must be accepted in the decreasing order of their length.
+Take sides as integers.
+*/
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+// Class name should be "Source",
+// otherwise solution won't be accepted
+public class Source {
+    public static void main(String[] args) {
+        
+        Scanner in = new Scanner(System.in);
+        
+        // Declare the variable
+        int a,b,c;
+        
+        // Read the variable from STDIN
+        a = in.nextInt();
+        b = in.nextInt();
+        c = in.nextInt();
+        // Output the variable to STDOUT
+        // System.out.print(a+" "+c+" "+b);
+        if(a > b && a > c){
+            if(a*a == b*b+c*c){
+                System.out.println("RIGHT ANGLE");
+            }
+            else{
+                System.out.println("NOT RIGHT ANGLE");
+            }
+        }
+        else{
+            System.out.println("INVALID_INPUT");
+        }
+        
+   }
+}
