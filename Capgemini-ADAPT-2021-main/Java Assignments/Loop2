@@ -39,6 +39,7 @@ Sample Input 6:
 Expected Output:
 INVALID_INPUT
 */
+// got 87.5 only
 import java.util.*;
 
 /**
