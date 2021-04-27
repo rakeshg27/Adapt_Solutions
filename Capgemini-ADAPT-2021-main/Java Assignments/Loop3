@@ -1,0 +1,85 @@
+/*
+DESCRIPTION
+Complete the main method to find whether a given 3-digit number is an Armstrong number or not.
+
+An Armstrong number of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself.
+For example, 371 is an Armstrong number since 33 + 73 + 13 = 371.
+
+Following requirements should be taken care in the program.
+
+
+
+Input should be taken through Console
+Program should print the output as described in the Example Section below
+If the number is not 3 digit output should show as INVALID_INPUT
+Example
+Sample Input 1:
+371
+Expected Output:
+ARMSTRONG
+Sample Input 2:
+832
+Expected Output:
+NOT ARMSTRONG
+Sample Input 3:
+153
+Expected Output:
+ARMSTRONG
+Sample Input 4:
+963
+Expected Output:
+NOT ARMSTRONG
+Sample Input 5:
+45
+Expected Output:
+INVALID_INPUT
+
+*/
+import java.util.Scanner;
+
+/**
+ * Main class
+ */
+public class Source {
+    /**
+    * Main method
+    * @param args 
+    */
+    	// Student code starts
+
+    public static void main(String[] args) {
+	
+	// Student code ends
+	Scanner sc = new Scanner(System.in);
+	int a = sc.nextInt();
+	int b =0;
+	b = a;
+	int temp=0;
+	int c =0;
+	int l = (int) (Math.log10(a) + 1);
+	if(l >2  && a> 99 && a<1000){
+	    while (a !=0){
+    	    temp = a%10;
+    	    c += Math.pow(temp,l);
+    	    a = (int)a/(int) 10;
+    	}
+    	if(c == b){
+    	    System.out.println("ARMSTRONG");
+    	}
+    	else{
+    	    System.out.println("NOT ARMSTRONG");
+    	}
+	    
+	}
+    else{
+        System.out.println("INVALID_INPUT");
+    }
+
+    }
+}
+
+
+
+
+
+
